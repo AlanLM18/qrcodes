@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Scanner de QR - Control de Acceso</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/qrstyle.css">
+</head>
+<body>
+  <div class="scanner-container text-center">
+    <img src="/images/logo_uteq.png" alt="Logo UTEQ" class="logo-uteq">
+    <h1 class="mb-4">Scanner de QR - Control de Acceso</h1>
+
+    <div class="btn-group-custom mb-4">
+      <!-- Botón Entrada Principal -->
+      <button id="btnEntrada" class="btn-custom primary active" 
+              data-tipo="entrada" 
+              data-zone="b8f5178d-6864-4865-ab43-295fe5dca7c6">
+        Entrada Principal
+      </button>
+      
+      <!-- Botón Salida Principal -->
+      <button id="btnSalida" class="btn-custom secondary" 
+              data-tipo="salida" 
+              data-zone="b8f5178d-6864-4865-ab43-295fe5dca7c6">
+        Salida Principal
+      </button>
+      
+      <!-- Botón Aula 1 - MODIFICADO: Agregado data-clase -->
+      <button id="btnClase1" class="btn-custom info" 
+              data-tipo="clase" 
+              data-zone="06466c66-e858-4763-9753-e4e9a13d8a59"
+              data-clase="d9a94c99-aa9e-45d1-a30f-7f17483639e0">
+        Aula 1 - Lunes 6:00 pm
+      </button>
+      
+      <!-- Botón Aula 2 - MODIFICADO: Agregado data-clase -->
+      <button id="btnClase2" class="btn-custom info" 
+              data-tipo="clase" 
+              data-zone="55da4390-2e9b-42aa-93ac-377d290bc86a"
+              data-clase="d10a5999-f41c-4178-923c-6e9e683508fa">
+        Aula 2 - Martes 7:00 pm
+      </button>
+    </div>
+
+    <div class="input-group mb-3 justify-content-center">
+      <input 
+        type="text" 
+        id="qr-input" 
+        class="form-control text-center" 
+        placeholder="Escanee el QR"
+        autofocus
+      >
+      <button id="btnBuscar" class="btn-buscar" type="button">Buscar</button>
+    </div>
+
+    <div id="estado" class="alert-custom info">Esperando escaneo...</div>
+
+    <div id="credencial-container" class="mt-4"></div>
+  </div>
+
+  <!-- Script actualizado -->
+  <script src="js/qrscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+:root {
+  --azul-claro: #0097b2;
+  --azul-medio: #007a99;
+  --azul-oscuro: #004b5c;
+  --blanco: #ffffff;
+  --gris-fondo: #f7f9fb;
+}
+
+/* ==== ESTILO GENERAL ==== */
+body {
+  background-color: var(--gris-fondo);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== TÍTULO ==== */
+h1 {
+  text-align: center;
+  color: var(--azul-oscuro);
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* ==== GRUPO DE BOTONES ==== */
+.btn-group-custom {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+/* ==== BOTÓN BASE ==== */
+.btn-custom {
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  border: none;
+}
+
+/* ==== BOTÓN SCANNER (tipo buscar) ==== */
+.btn-custom.primary {
+  background-color: var(--azul-claro);
+  color: var(--blanco);
+  box-shadow: 0 3px 8px rgba(0, 91, 150, 0.2);
+}
+
+.btn-custom.primary:hover {
+  background-color: var(--azul-medio);
+  box-shadow: 0 4px 12px rgba(0, 91, 150, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-custom.primary:active {
+  background-color: var(--azul-oscuro);
+  box-shadow: 0 2px 6px rgba(0, 43, 91, 0.3);
+  transform: translateY(0);
+}
+
+/* ==== BOTÓN SECUNDARIO ==== */
+.btn-custom.secondary {
+  background-color: #e5eef2;
+  color: var(--azul-oscuro);
+}
+
+.btn-custom.secondary:hover {
+  background-color: #d1e5ed;
+  transform: translateY(-2px);
+}
+
+/* ==== TABLA ==== */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.table thead {
+  background: var(--azul-claro);
+  color: white;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #eaf7fa;
+  transform: scale(1.01);
+  transition: all 0.2s ease;
+}

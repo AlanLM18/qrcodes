@@ -1,0 +1,343 @@
+/* Estilo inspirado en UTEQ - Moderno, accesible y visualmente agradable */
+
+/* ==== COLORES BASE ==== */
+:root {
+  --azul-oscuro: #002b5b;
+  --azul-medio: #005b96;
+  --azul-claro: #0097b2;
+  --celeste-suave: #e0f7ff;
+  --gris-fondo: #f5f7fa;
+  --texto-oscuro: #1b2a41;
+  --blanco: #ffffff;
+}
+
+/* ==== FONDO Y CONTENEDOR ==== */
+body {
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-medio));
+  font-family: 'Poppins', sans-serif;
+  color: var(--texto-oscuro);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.scanner-container {
+  background: var(--blanco);
+  border-radius: 20px;
+  padding: 40px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 24px rgba(0, 43, 91, 0.25);
+  border: 1px solid rgba(0, 151, 178, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scanner-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 91, 150, 0.25);
+}
+
+/* ==== TITULOS ==== */
+h1 {
+  color: var(--azul-oscuro);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: var(--azul-claro);
+  font-size: 1.1rem;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+
+/* ==== TEXTO ==== */
+.lead {
+  font-size: 1rem;
+  color: var(--texto-oscuro);
+}
+
+/* ==== BOTÓN DE BÚSQUEDA ==== */
+.btn-buscar {
+  background-color: var(--azul-claro);
+  color: var(--blanco);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 91, 150, 0.2);
+}
+
+.btn-buscar:hover {
+  background-color: var(--azul-medio);
+  box-shadow: 0 4px 12px rgba(0, 91, 150, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-buscar:active {
+  background-color: var(--azul-oscuro);
+  box-shadow: 0 2px 6px rgba(0, 43, 91, 0.3);
+  transform: translateY(0);
+}
+
+
+/* ==== BOTONES ==== */
+.btn-group-custom {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-custom {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-custom.primary {
+  background: var(--azul-claro);
+  color: var(--blanco);
+}
+
+.btn-custom.secondary {
+  background: #d9e8f0;
+  color: var(--azul-oscuro);
+}
+
+.btn-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 151, 178, 0.4);
+}
+
+/* ==== INPUT ==== */
+.input-group input {
+  max-width: 400px;
+  border-radius: 10px;
+  border: 1px solid var(--azul-claro);
+  background-color: var(--gris-fondo);
+  color: var(--texto-oscuro);
+}
+
+.input-group input::placeholder {
+  color: #6c757d;
+}
+
+.btn-outline-primary {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  color: var(--blanco);
+}
+
+/* ==== ALERTAS ==== */
+.alert-custom {
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 20px;
+  font-weight: 500;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.alert-custom.info {
+  background-color: #e6faff;
+  border: 1px solid var(--azul-claro);
+  color: var(--azul-medio);
+}
+
+.alert-custom.success {
+  background-color: #e6fff1;
+  border: 1px solid #00c389;
+  color: #008f68;
+}
+
+.alert-custom.warning {
+  background-color: #fffbe6;
+  border: 1px solid #ffd000;
+  color: #a68b00;
+}
+
+.alert-custom.danger {
+  background-color: #ffeaea;
+  border: 1px solid #ff6b6b;
+  color: #a83b3b;
+}
+
+/* ==== RESPONSIVO ==== */
+@media (max-width: 600px) {
+  .scanner-container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-group-custom {
+    flex-direction: column;
+  }
+}
+
+.input-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 50, 0.2);
+  transition: all 0.3s ease;
+}
+
+.input-section:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.02);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #cfd8ff;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.btn-buscar.secondary {
+  background-color: #2b4b80;
+  color: #fff;
+}
+
+.btn-buscar.secondary:hover {
+  background-color: #3a5ea2;
+  color: #fff;
+}
+
+.btn-group-custom {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-custom {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 150px;
+}
+
+.btn-custom.primary {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-custom.secondary {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-custom.info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-custom.warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.btn-custom.active {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-custom:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   BOTONES PERSONALIZADOS UTEQ
+   =========================== */
+
+.btn-custom {
+  padding: 12px 22px;
+  border-radius: 14px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+
+  box-shadow: 0 4px 12px rgba(0, 43, 91, 0.18);
+  color: white;
+}
+
+/* ESTADOS DE COLORES */
+.btn-custom.primary {
+  background: var(--azul-claro);
+}
+.btn-custom.primary:hover {
+  background: var(--azul-medio);
+  transform: translateY(-2px);
+}
+
+.btn-custom.secondary {
+  background: var(--azul-oscuro);
+}
+.btn-custom.secondary:hover {
+  background: #001d3c;
+  transform: translateY(-2px);
+}
+
+.btn-custom.info {
+  background: var(--azul-medio);
+}
+.btn-custom.info:hover {
+  background: var(--azul-oscuro);
+  transform: translateY(-2px);
+}
+
+.btn-custom.warning {
+  background: var(--warning);
+  color: #4d3b00;
+}
+.btn-custom.warning:hover {
+  background: #d4a503;
+  transform: translateY(-2px);
+}
+
+/* BOTÓN ACTIVO */
+.btn-custom.active {
+  border: 3px solid var(--blanco);
+  box-shadow: 0 0 0 3px rgba(0, 151, 178, 0.35);
+}
+
+/* GRUPO DE BOTONES */
+.btn-group-custom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .btn-custom {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+}
